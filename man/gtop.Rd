@@ -3,7 +3,7 @@
 \title{Reconciliate individual predictions using GTOP}
 \usage{
 gtop(preds_indiv, pred_total, weights_indiv, weight_total, bounds_indiv,
-  optim = TRUE)
+  method = "gtop")
 }
 \arguments{
   \item{preds_indiv:}{vector contains the individual
@@ -19,7 +19,7 @@ gtop(preds_indiv, pred_total, weights_indiv, weight_total, bounds_indiv,
   \item{bounds_indiv}{: vector, contains the bounds of the
   individuals}
 
-  \item{optim}{: logical, should use the optimized code for
+  \item{method}{: string, should use the optimized code for
   large number of individuals ? (default = TRUE)}
 }
 \value{

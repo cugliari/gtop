@@ -15,7 +15,7 @@
 #' @param weights_indiv: vector, contains the weights of the individuals
 #' @param weights_total: weight of the total
 #' @param bounds_indiv : vector, contains the bounds of the individuals
-#' @param optim : logical, should use the optimized code for large 
+#' @param method : string, should use the optimized code for large 
 #'                number of individuals ? (default = TRUE)
 #' @return A list with the reconciliated predictions for the 
 #'         individuals and the total, and the solution of the 
@@ -31,9 +31,23 @@
 
 gtop <- function(preds_indiv,   pred_total,
                  weights_indiv, weight_total, 
-                 bounds_indiv, optim = TRUE) {
-  preds <- 0
-  solution <- 0
-  return(list(preds_indiv = preds, solution = v))
+                 bounds_indiv, method = "gtop") {
+  if(method == "gtop") 
+    res <- gtopQuad(preds_indiv,   pred_total,
+                    weights_indiv, weight_total, 
+                    bounds_indiv)
+  
+  if(method == "gtop") 
+    res <- gtopQuad(preds_indiv,   pred_total,
+                    weights_indiv, weight_total, 
+                    bounds_indiv)
+
+  if(method == "hts") stop("not implemented yed")
+  
+  if(method == "proj") 
+    res <- proj(preds_indiv,   pred_total, 
+                weights_indiv, weight_total )
+
+  return(res)
 } 
 
