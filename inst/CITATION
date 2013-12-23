@@ -1,0 +1,20 @@
+bibentry("InBook",
+   title = "Modeling and Stochastic Learning for Forecasting
+            in High Dimension,
+   editor = personList(as.person("Anestis Antoniadis), 
+                       as.person("Xavier Brossat"), 
+                       as.person("Jean-Michel Poggi")),
+   chapter = "Game-theorically Optimal Reconciliation of Contemporaneous
+              Hierarchical Time Series Forecasts",
+   author = personList(as.person(Tim van Erven"),
+                             as.person("Jairo Cugliari")),
+   publisher = "LNS-Springer",
+   address      = "Paris",
+   year   = "2014",
+
+   textVersion = "van Erven, T. and Cugliari, J. (2014) Game-theorically
+                  Optimal Reconciliation of Contemporaneous Hierarchical
+                  Time Series Forecasts, in 
+                  Modeling and Stochastic Learning for Forecasting
+                  in High Dimension (ed. Antoniadis, Brossat & Poggi)"
+)

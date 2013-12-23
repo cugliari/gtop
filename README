@@ -1,0 +1,8 @@
+gtop offers reconciliation methods for hierarchical time 
+series forecasting.
+
+Three different methods are implemented:
+  
+* ordinary projection
+* Hydman & xxx approach
+* Game Theoric Optimisation Problem approach
