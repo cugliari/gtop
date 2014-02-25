@@ -1,20 +1,14 @@
-\name{proj}
-\alias{proj}
-\title{Prediction conciliation by projection.}
+\name{hts}
+\alias{hts}
+\title{Prediction conciliation by ...n.}
 \usage{
-proj(preds_indiv, pred_total, weights_indiv, weight_total)
+hts(preds_indiv, pred_total)
 }
 \arguments{
   \item{preds_indiv}{: K-length vector with predictions
   ybar_1,...,ybar_K for individual regions}
 
   \item{pred_total}{: number with prediction ybar_* for the
-  total consumption}
-
-  \item{weights_indiv}{: K-length vector with weights
-  a_1,...,a_K for individual regions}
-
-  \item{weight_total}{: number with weight a_* for the
   total consumption}
 }
 \value{
@@ -27,8 +21,9 @@ time series forecasts.
 }
 \examples{
 K <- 5
-proj(preds_indiv = rep(0, K), 1,
-     weights_indiv = rep(1, K),
-     weight_total = 2)
+hts(preds_indiv = rep(0, K), 1)
+}
+\references{
+Hydman et al. (xxx)
 }
 

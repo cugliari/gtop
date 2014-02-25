@@ -7,34 +7,34 @@
 #' quantities and a global quantity. There exists a contraint that
 #' matches the sum of the individual quantities to the global quantity.
 #' However, forecasting models don't take into account this constraint.
-#' 
-#' With GTOP you can reconciliate bla bla bla
+#' With GTOP you can reconciliate the individual and global quantities 
+#' in order to match the aggregate consistency contraint.
 #'
-#' @aliases gtopLasso gtopQuad
-#'          
-#'                                    
+#'       
 #' @param preds_indiv: vector contains the individual predictions
 #' @param pred_total: prediction for the sum of individuals
 #' @param weights_indiv: vector, contains the weights of the individuals
-#' @param weights_total: weight of the total
+#' @param weight_total: weight of the total
 #' @param bounds_indiv : vector, contains the bounds of the individuals
 #' @param solver : string, use quadratic programming (\code{quad}) or
 #'                 Lasso-like solvers (\code{lasso}) 
 #' @return A list with 
 #'   \item{pred_indivs} the reconciliated predictions for the 
 #'         individuals and the total, 
-#'   \item{solution } the solution to the associate minimisation 
+#'   \item{solution} the solution to the associate minimisation 
 #'         problem.
 #' @examples
 #' K <- 5
 #' indiv <- rep(0, K)
 #' total <- 1
-#' gtop(preds_indiv = indiv, total, 
-#'      weights_indiv = rep(1, K), weight_total = 2,
+#' gtop(preds_indiv   = indiv, 
+#'      pred_total = total, 
+#'      weights_indiv = rep(1, K), 
+#'      weight_total = 2,
 #'      bounds_indiv  = rep(1 / K, K))
 
 
-gtop <- function(preds_indiv,   pred_total,
+gtop <- function(preds_indiv, pred_total,
                  weights_indiv, weight_total, 
                  bounds_indiv, solver = "quad") {
   if(solver == "quad") 
@@ -46,7 +46,6 @@ gtop <- function(preds_indiv,   pred_total,
                     weights_indiv, weight_total, 
                     bounds_indiv)
   else stop("Invalid option for solver")
-
   return(res)
 } 
 
