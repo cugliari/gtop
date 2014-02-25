@@ -8,7 +8,7 @@
 #' @return A vector with the reconciliated predictions for the 
 #'         individuals and the total.
 #' @references Hydman et al. (xxx) 
-#' @example
+#' @examples
 #' K <- 5
 #' hts(preds_indiv = rep(0, K), 1)
 

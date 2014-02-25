@@ -1,9 +1,11 @@
 \name{gtop}
 \alias{gtop}
+\alias{gtopLasso}
+\alias{gtopQuad}
 \title{Reconciliate individual predictions using GTOP}
 \usage{
 gtop(preds_indiv, pred_total, weights_indiv, weight_total, bounds_indiv,
-  method = "gtop")
+  solver = "quad")
 }
 \arguments{
   \item{preds_indiv:}{vector contains the individual
@@ -19,13 +21,14 @@ gtop(preds_indiv, pred_total, weights_indiv, weight_total, bounds_indiv,
   \item{bounds_indiv}{: vector, contains the bounds of the
   individuals}
 
-  \item{method}{: string, should use the optimized code for
-  large number of individuals ? (default = TRUE)}
+  \item{solver}{: string, use quadratic programming
+  (\code{quad}) or Lasso-like solvers (\code{lasso})}
 }
 \value{
-A list with the reconciliated predictions for the
-individuals and the total, and the solution of the
-minimisation problem.
+A list with \item{pred_indivs} the reconciliated
+predictions for the individuals and the total,
+\item{solution } the solution to the associate minimisation
+problem.
 }
 \description{
 Uses a Game Theory approach to reconciliate hierarchical
@@ -45,7 +48,7 @@ K <- 5
 indiv <- rep(0, K)
 total <- 1
 gtop(preds_indiv = indiv, total,
-     weights_indiv = rep(1, K), weights_total = 2,
+     weights_indiv = rep(1, K), weight_total = 2,
      bounds_indiv  = rep(1 / K, K))
 }
 

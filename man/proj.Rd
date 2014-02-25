@@ -17,13 +17,13 @@ proj(preds_indiv, pred_total, weights_indiv, weight_total)
   \item{weight_total}{: number with weight a_* for the
   total consumption}
 }
+\value{
+A vector with the reconciliated predictions for the
+individuals and the total.
+}
 \description{
 Uses a simple L2 projection to reconciliate hierarchical
 time series forecasts.
-}
-\details{
-Individual and global forecasts are reconciliated by
-projecting the quantities over a ...
 }
 \examples{
 K <- 5

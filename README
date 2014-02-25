@@ -3,6 +3,6 @@ series forecasting.
 
 Three different methods are implemented:
   
-* ordinary projection
-* Hydman & xxx approach
-* Game Theoric Optimisation Problem approach
+* simple l2-projection
+* hts (Hyndman, Ahmed, Athanasopoulos & Shang (2011))
+* gtop (van Erven & Cugliari, (2014))

@@ -5,6 +5,9 @@ Version: 0.1.0
 Date: 2013-12-22
 Author: Tim van Erven, Jairo Cugliari
 Maintainer: Jairo Cugliari <Jairo.Cugliari@univ-lyon2.fr>
-Description: bla bla bla 
+Description: bla bla bla
 License: GPL-2 | GPL-3
-Depends: hts, quadprog, lassoshooting
+Depends:
+    hts,
+    quadprog,
+    lassoshooting
